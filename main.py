@@ -190,7 +190,28 @@ print("Result:", result)
 Add a check to see if someone is trying to divide by zero, if so, give an appropriate message
 """
 
+# Define variables
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+operation = input("Enter the operation (+, -, *, /): ")
 
+# Perform the operation
+if operation == "+":
+    result = num1 + num2
+elif operation == "-":
+    result = num1 - num2
+elif operation == "*":
+    result = num1 * num2
+elif operation == "/":
+    if num2 == 0:
+        result = "Cant divide by zero"
+    else:
+        result = num1 / num2
+else:
+    result = "Invalid operation"
+
+# Print the result
+print("Result:", result)
 
 """Exercise 8. <br />
 Make a script out of all task and put it on GitHub
